@@ -1,0 +1,282 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+   
+}
+.parent-container{
+    width:100%;
+    height: 100%;
+}
+header{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:80px;
+}
+.title a{
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+ a{
+    text-decoration: none;
+    color: white;
+}
+.nav-links {
+    display: flex;
+}
+.nav-links a{
+    margin:0px 20px;
+}
+.nav-links a:hover{
+    color: indianred;
+}
+.nav-links a:hover::after{
+    content:'';
+    width: 100%;
+    height: 2px;
+    display: block;
+    background-color: indianred;
+    color: indianred;
+    transition: 0.5s ease-in-out;
+}
+.nav-links a::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: indianred;
+}
+i:hover{
+    color: yellow;
+}
+
+.btn a{
+    background-color: indianred;
+    padding: 8px 13px;
+    border-radius: 5px;
+}
+.btn a:hover{
+    color:black;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url('background.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   margin-bottom: 50px;
+   color:white;
+}
+section{
+   position:absolute;
+   top:40%;
+   left:28%;
+   text-align: center;
+}
+section h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+section a{
+    font-size: 25px;
+    background-color:transparent;
+    padding: 8px 14px;
+    border: 3px solid indianred;
+    border-radius: 30px;
+}
+section a:hover{
+    background-color: indianred;
+    transition: 0.5s;
+}
+.cards{
+    width:100%;
+    height: 100%;
+    margin-bottom: 30px;
+}
+.card-container{
+    width: 100%;
+    height: fit-content;
+    display:flex;
+    justify-content: space-around;
+}
+.card-title{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.card-title::before{
+    content:"P";
+    color: indianred;
+}
+
+.card{
+    background-color:lightgreen;
+    width: 300px;
+    height:550px;
+    color: black;
+}
+.text-fields{
+    padding: 10px;
+    height: 100%;
+}
+.yellow{
+    color: yellow;
+}
+img{
+    width: 100%;
+    height: 50%;
+    object-fit:cover;
+}
+.card-btn button{
+    background-color:yellow;
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.div{
+    margin-top: 20px;
+}
+.services{
+    width:100%;
+    height: 100%;
+    margin-top: 30px;
+}
+.box{
+    width:300px;
+    height: 100%;
+    background-color:lightblue;
+    text-align: center;
+    padding: 50px 20px;
+}
+.service-font{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.service-para{
+    margin-top: 10px;
+}
+.service-container{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.head{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.head::before{
+    content:"S";
+    color: indianred;
+}
+.formcontainer{
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+    margin-top: 30px;
+    padding: 0px 50px;
+}
+.form-img{
+    width:50%;
+    height:500px;
+}
+.div-form{
+    margin: 20px 0px;
+}
+.image{
+    width:100%;
+    height:100%;
+}
+input{
+    outline: none;
+    padding: 10px;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid indianred;
+}
+.form{
+    margin-top: 30px;
+}
+.Book{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+footer{
+    width:100%;
+    height: 100px;
+    background-color: black;
+    color:white;
+    margin-top: 30px;
+    text-align: center;
+}
+
+@media (max-width:650px)
+{
+    
+    section h1,h2{
+        font-size: 25px;
+    }
+    .card-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .form-img{
+        display: none;
+    }
+    .nav-links{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+        padding: 20px;
+        background:lightseagreen;
+        width: 100%;
+        position:absolute;
+        top:80px;
+        display: none;
+    }
+    .hamburger .line{
+        width:20px;
+        height: 2px;
+        background-color: indianred;
+        margin-bottom: 5px;
+    }
+    .show{
+        display: flex;
+    }
+    
+}
+@media (max-width:470px)
+{
+    .service-container{
+        flex-direction: column;
+    }
+    .box{
+        width:100%;
+        margin-bottom: 10px;
+    }
+  
+    input{
+        width: 100%;
+    }
+}
+
